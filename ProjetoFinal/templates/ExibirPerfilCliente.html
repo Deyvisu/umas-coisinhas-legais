@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset ="UTF-8">
+    <title>Ver Perfil</title>
+</head>
+
+<body>
+    <h1>Seu Perfil</h1>
+    
+    <h1>Seus dados:</h1>
+
+    <ul>
+        {% for dado in dados %}
+        <li>ID: {{dado[0]}} - Nome Completo: {{dado[1]}} - Idade: {{dado[2]}} - Data de Nascimento: {{dado[3]}} - CPF: {{dado[4]}} - Telefone: {{dado[5]}} - E-mail: {{dado[6]}}</li>
+        {%endfor%}
+    </ul>
+    <a href = "/">Voltar à página inicial</a>
+</body>
+
+</html>

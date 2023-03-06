@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Clientes</title>
+</head>
+<body>
+    <h1>Cadastro de Usuário</h1>
+
+    <form method="post">
+        <div>
+            <label> Nome Completo: </label>
+            <input type= "text" name="nomeCompleto" placeholder="Digite aqui seu nome completo" value="{{request.form['nomeCompleto']}}">
+        </div>
+
+        <div>
+            <label> Idade: </label>
+            <input type= "text" name="idade" placeholder="Digite aqui a sua idade" value="{{request.form['idade']}}">
+        </div>
+
+        <div>
+            <label> Data de Nascimento: </label>
+            <input type= "text" name="dataNascimento" placeholder="Digite a sua data de nascimento" value="{{request.form['dataNascimento']}}">
+        </div>
+
+        <div>
+            <label> CPF: </label>
+            <input type= "text" name="cpf" placeholder="Digite aqui seu CPF" value="{{request.form['cpf']}}">
+        </div>
+
+        <div>
+            <label> Telefone: </label>
+            <input type= "text" name="telefone" placeholder="Digite aqui seu telefone para contato" value="{{request.form['telefone']}}">
+        </div>
+
+        <div>
+            <label> E-mail: </label>
+            <input type= "text" name="email" placeholder="Digite aqui seu e-mail para cadastro" value="{{request.form['email']}}">
+        </div>
+
+        <div>
+            <label> Senha: </label>
+            <input type= "text" name="senha" placeholder="Digite aqui sua senha para cadastro" value="{{request.form['senha']}}">
+        </div>
+
+        <div>
+            <label> Confirmação de Senha: </label>
+            <input type= "text" name="confirmacaoSenha" placeholder="Digite novamente sua senha" value="{{request.form['confirmacaoSenha']}}">
+        </div>
+
+        <div>
+            <button type="submit">Efetuar Cadastro</button>
+        </div>
+        
+    </form>
+</body>
+
+</html>

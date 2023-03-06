@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cliente Login</title>
+</head>
+
+<body>
+    <h1>Login</h1>
+    
+    <form id="formulario" method="post" >
+        <div>
+            <label> E-mail de Usuário: </label>
+            <input type="text" id="emailLogin" name="emailLogin" placeholder="Digite aqui seu e-mail cadastrado" 
+                value="{{request.form['emailLogin']}}">
+                {%if mensagem == "Deu erro"%}
+                <p>Email inválido</p>
+                {%endif%}
+        </div>
+
+        <div>
+            <label> Senha: </label>
+            <input type="text" id="senhaLogin" name="senhaLogin" placeholder="Digite aqui sua senha cadastrada" 
+                value="{{request.form['senhaLogin']}}">
+        </div>
+
+        <div>
+            <button type="submit">Efetuar Login</button>
+        </div>
+
+    </form>
+
+    {%if mensagem == "Deu erro"%}
+    <script>const email = document.querySelector("#emailLogin")
+    email.value = "Login inválido"</script>
+    {%endif%}
+    <!-- <script src="{{url_for('static', filename='main.js')}}"></script> -->
+    <!-- <script>
+        function doSomething() {
+            alert('Login efetuado!');
+            return true;
+        }
+
+    </script> -->
+</body>
+
+</html>
